@@ -1,0 +1,9 @@
+#!/bin/bash
+
+SHERLOCK_PATH="/scratch/users/nbachand"
+REL_PATH=$(relpath ~/Documents/Research $(PWD)/$1)
+SYNC_PATH="$SHERLOCK_PATH/$REL_PATH"
+
+echo "Syncing $SYNC_PATH"
+
+rsync -P -az "sherlock:$SYNC_PATH" ./
