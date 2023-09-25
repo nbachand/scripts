@@ -1,0 +1,4 @@
+echo ">>>>> statements"
+cat slurm-* | grep ">>>>>"
+echo "tail"
+tail slurm-*
