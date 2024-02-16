@@ -1,5 +1,5 @@
 #!/bin/bash
-LOCAL_PATH=$(realpath --relative-to="/home/" "$PWD")
-DIR_SCRATCH="/scratch/$LOCAL_PATH"
+LOCAL_PATH=$(realpath --relative-to="$OAK_HOME" "$PWD")
+DIR_SCRATCH="/$SCRATCH/$LOCAL_PATH"
 cd "$DIR_SCRATCH"
 
