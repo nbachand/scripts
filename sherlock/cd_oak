@@ -1,0 +1,4 @@
+#!/bin/bash
+LOCAL_PATH=$(realpath --relative-to="$SCRATCH" "$PWD")
+DIR_OAK="/$OAK_HOME/$LOCAL_PATH"
+cd "$DIR_OAK"
