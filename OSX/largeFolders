@@ -1,0 +1,2 @@
+du -ht 1G ./ 2>/dev/null | sort -nr
+

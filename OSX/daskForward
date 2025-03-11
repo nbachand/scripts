@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# personalize these:
+usr="nbachand"
+
+read -p "Enter node address [02-01n57]: " node
+node=${node:-02-01n57}
+echo $node
+
+read -p "Enter dask port [8787]: " port
+port=${port:-8787}
+echo $port
+
+kill -9 $(lsof -ti:$port)
+sleep 3
+ssh -f -L localhost:$port:sh$node:$port $usr@login.sherlock.stanford.edu sleep 300
